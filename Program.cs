@@ -10,6 +10,23 @@ namespace Klassendefinieren_04_2021
     {
         static void Main(string[] args)
         {
+            Auto meinAuto = new Auto();
+            Auto deinAuto = new Auto();
+
+            meinAuto.alterinJahren = 2;
+            meinAuto.marke = "Opel";
+
+            deinAuto.alterinJahren = 5;
+            deinAuto.marke = "Porsche";
+
+            meinAuto.AktuelleGeschwindigkeit();
+            deinAuto.AktuelleGeschwindigkeit();
+
+            meinAuto.Beschleunigenauf100kmh();
+            deinAuto.Beschleunigenauf100kmh();
+
+            meinAuto.AktuelleGeschwindigkeit();
+            deinAuto.AktuelleGeschwindigkeit();
         }
     }
 }
