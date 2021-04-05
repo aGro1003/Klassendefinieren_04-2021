@@ -10,14 +10,11 @@ namespace Klassendefinieren_04_2021
     {
         static void Main(string[] args)
         {
-            Auto meinAuto = new Auto();
-            Auto deinAuto = new Auto();
+            Auto meinAuto = new Auto("Opel");
+            Auto deinAuto = new Auto("Porsche");
 
-            meinAuto.alterinJahren = 2;
-            meinAuto.marke = "Opel";
-
-            deinAuto.alterinJahren = 5;
-            deinAuto.marke = "Porsche";
+            meinAuto.AlterinJahren = 2;
+            deinAuto.AlterinJahren = 5;
 
             meinAuto.AktuelleGeschwindigkeit();
             deinAuto.AktuelleGeschwindigkeit();

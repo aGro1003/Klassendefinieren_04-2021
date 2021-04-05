@@ -8,9 +8,40 @@ namespace Klassendefinieren_04_2021
 {
     public class Auto
     {
-        public string marke;
-        public int alterinJahren;
         private int aktGeschwindigkeit;
+
+        public Auto(string autoMarke)
+        {
+            Marke = autoMarke;
+            AlterinJahren = 0;
+            aktGeschwindigkeit = 0;
+        }
+
+        public int AlterinJahren { get; set; }  // mit prob
+
+
+        private string marke;                   // mit probfull
+
+        public string Marke
+        {
+            get { return marke; }
+            set 
+            {
+                if (value == "Porsche")
+                {
+                    marke = value;
+                }
+                else if (value == "Opel")
+                {
+                    marke = value;
+                }
+                else
+                {
+                    Console.Write("Nicht unterstützt ");
+                }
+            }
+        }
+
 
         public void Beschleunigenauf100kmh()
         {
@@ -18,11 +49,11 @@ namespace Klassendefinieren_04_2021
 
             if (IstSchnell())
             {
-                Console.WriteLine("Ich habe schnell beschleunigt! Yeah!");
+                Console.Write($"Der {marke} hat schnell beschleunigt! Yeah!");
             }
             else
             {
-                Console.WriteLine("Ich habe normal beschleunigt!");
+                Console.Write($"Der {marke} hat normal beschleunigt!");
             }
             Console.ReadLine();
         }
@@ -39,7 +70,7 @@ namespace Klassendefinieren_04_2021
 
         public void AktuelleGeschwindigkeit()
         {
-            Console.WriteLine($"Die aktuelle Geschwindikeit beträgt: {aktGeschwindigkeit}");
+            Console.Write($"Die aktuelle Geschwindikeit beträgt: {aktGeschwindigkeit}");
             Console.ReadLine();
         }
     }
